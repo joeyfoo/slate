@@ -1,5 +1,8 @@
 ---
-layout: default
+layout: page-template
 ---
 
-{{ content }}
+<div class="page-text">
+    <p class="page-date">{{ page.date | date: date_format }}</p>
+    {{ content }}
+</div>

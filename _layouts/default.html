@@ -1,1 +1,27 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+        {%- seo -%}
+        {%- if jekyll.environment == 'production' and site.google_analytics -%}
+            {%- include google-analytics.html -%}
+        {%- endif -%}
+        {%- if page.background-image -%}
+            <style>
+                html{
+                    background-image: url("{{ page.background-image }}");
+                }
+            </style>
+        {%- endif -%}
+    </head>
+    <body>
+        {%- include header.html -%}
+        <main aria-label="Content">
+            {{ content }}
+        </main>
+        {%- include footer.html -%}
+    </body>
+</html>

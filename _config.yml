@@ -1,0 +1,9 @@
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+
+title: Slate theme
+
+header_pages:
+- index.md
+- docs.md

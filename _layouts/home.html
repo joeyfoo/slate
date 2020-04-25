@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article id="content" class="home">
+    <div class="home-content">
+        <h1 class="home-title">
+            {% if page.welcome %}
+                {{ page.welcome | markdownify | remove: '<p>' | remove: '</p>' }}
+            {% else if page.title %}
+                {{ page.title }}
+            {% else %}
+                {{ site.title }}
+            {% endif %}
+        </h1>
+        <p class="home-description">
+            {{ page.description | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+
+        <p class="home-text">
+            {{ content }}
+        </p>
+
+        {% if page.links %}
+            <ul class="home-links link-collection">
+            {% for item in page.links %}
+                <li>
+                    <a href="{{ item.link }}">{{ item.title | markdownify }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</article>

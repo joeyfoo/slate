@@ -1,5 +1,16 @@
 ---
-layout: default
+layout: page-template
 ---
 
-{{ content }}
+{% if page.infobox %}
+    <div class="infobox">
+    {% for item in page.infobox %}
+        <dt>{{item.title}}</dt>
+        <dd>{{item.content | newline_to_br}}</dd>
+    {% endfor %}
+    </div>
+{% endif %}
+
+<div class="page-text">
+    {{ content }}
+</div>
