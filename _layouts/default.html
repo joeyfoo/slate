@@ -12,7 +12,7 @@
         {%- if page.background-image -%}
             <style>
                 html{
-                    background-image: url("{{ page.background-image }}");
+                    background-image: url("{{ page.background-image | relative_url }}");
                 }
             </style>
         {%- endif -%}
