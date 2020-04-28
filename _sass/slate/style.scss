@@ -97,11 +97,13 @@ h2, h3, h4, h5, h6, p{
 h1{
     color: $color-heading;
     font-size: 2.5rem;
+    font-family: $font-title;
     margin: 0 auto 1rem;
 }
 
 h2, h3, h4, h5, h6{
     color: $color-heading;
+    font-family: $font-title;
 }
 h2{
     font-size: 1.75rem;
