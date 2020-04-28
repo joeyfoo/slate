@@ -10,6 +10,7 @@ description: A clean, minimalist theme for Jekyll sites.
 links:
     - title: Read the **Documentation**
       link: docs.html
+      description: "(It's incomplete)"
     - title: GitHub repository
       link: https://github.com/joeyfoo/slate
 ---

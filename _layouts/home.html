@@ -25,7 +25,12 @@ layout: default
             <ul class="home-links link-collection">
             {% for item in page.links %}
                 <li>
-                    <a href="{{ item.link }}">{{ item.title | markdownify }}</a>
+                    <a href="{{ item.link }}">
+                        <div class="link-title">{{ item.title | markdownify }}</div>
+                        {% if item.description %}
+                            <div class="link-description">{{ item.description | markdownify }}</div>
+                        {% endif %}
+                    </a>
                 </li>
             {% endfor %}
             </ul>
