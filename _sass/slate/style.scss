@@ -292,4 +292,9 @@ main{
 footer{
     flex: initial;
     padding: $width-page-padding;
+    font-size: 0.75rem;
+    opacity: 0.75;
+    p:last-child{
+        margin-bottom: 0;
+    }
 }
