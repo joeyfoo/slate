@@ -24,7 +24,8 @@ layout: default
         {% if page.links %}
             <ul class="home-links link-collection">
             {% for item in page.links %}
-                <li>
+                {% if item.link %}
+                <li class="link">
                     <a href="{{ item.link }}">
                         <div class="link-title">{{ item.title | markdownify }}</div>
                         {% if item.description %}
@@ -32,6 +33,11 @@ layout: default
                         {% endif %}
                     </a>
                 </li>
+                {% else if item.section %}
+                <li class="section">
+                    {{ item.section }}
+                </li>
+                {% endif %}
             {% endfor %}
             </ul>
         {% endif %}

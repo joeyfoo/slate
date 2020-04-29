@@ -160,11 +160,15 @@ main table{
     padding-left: 0;
     list-style: none;
     @include floating();
-    li{
+    li.section{
+        padding: 0.5rem;
+        border: 1px solid rgba($button-fg, 0.25);
+    }
+    li.link{
         a{
-            display: block;
             font-size: 1.25rem;
             padding: 0.5rem;
+            display: block;
             @include button();
             border-radius: 0;
             &:hover, &:focus{
@@ -176,6 +180,7 @@ main table{
             .link-description{
                 font-size: 1rem;
                 opacity: 0.75;
+                padding-left: 0.5rem;
             }
         }
         &:first-child a{
