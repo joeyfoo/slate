@@ -161,8 +161,8 @@ main table{
     list-style: none;
     @include floating();
     li.section{
-        padding: 0.5rem;
-        border: 1px solid rgba($button-fg, 0.25);
+        padding: 1rem 0.5rem 0.5rem;
+        font-weight: bold;
     }
     li.link{
         a{
