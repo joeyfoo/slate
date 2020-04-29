@@ -138,12 +138,12 @@ a{
     }
 }
 
-img{
+main img{
     max-width: 100%;
     @include floating();
 }
 
-table{
+main table{
     width: 100%;
     @include floating();
     margin-bottom: 1rem;
