@@ -317,7 +317,11 @@ footer{
     padding: $width-page-padding;
     font-size: 0.75rem;
     opacity: 0.75;
-    p:last-child{
+    p
+    {
         margin-bottom: 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }
