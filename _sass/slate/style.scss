@@ -16,11 +16,11 @@ $color-link: hsl(210, 75%, 75%) !default;
 $color-link-active: scale-color($color: $color-link, $lightness: 50%) !default;
 
 // (Floating elements (e.g. link collection))
-$floating-bg: $color-bg !default;
 $floating-shadow: 0 0 8rem rgba(#000, 0.75) !default;
+$floating-contrast-bg: rgba(#000, 0.5) !default;
 
 $button-fg: $color-text !default;
-$button-bg: $floating-bg !default;
+$button-bg: transparent !default;
 
 $button-fg-active: $color-heading;
 $button-bg-active: scale-color($color-bg, $lightness: 10%) !default;
@@ -35,7 +35,6 @@ $background-opacity-start: 0.7 !default;
 $background-opacity-end: 1.0 !default;
 
 @mixin floating {
-    background-color: $floating-bg;
     box-shadow: $floating-shadow;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -43,7 +42,6 @@ $background-opacity-end: 1.0 !default;
 
 @mixin button {
     color: $button-fg;
-    background-color: $button-bg;
     border: 1px solid rgba($button-fg, 0.25);
     border-radius: 0.5rem;
     z-index: 1;
@@ -147,12 +145,27 @@ main table{
     width: 100%;
     @include floating();
     margin-bottom: 1rem;
-    border-collapse: collapse;
     border-radius: 0;
+    border-collapse: collapse;
     td,th{
         border: 1px solid rgba($color-text, 0.25);
-        padding: 0.125rem 0.25rem;
+        padding: 0.25rem 0.5rem;
     }
+    th{
+        background-color: $floating-contrast-bg;
+    }
+    tr{
+        &:hover{
+            background-color: $floating-contrast-bg;
+        }
+    }
+
+}
+
+.full-width{
+    width: 90vw;
+    position: relative;
+    left: calc(-45vw + 50%);
 }
 
 // COMPONENTS
@@ -160,6 +173,7 @@ main table{
     padding-left: 0;
     list-style: none;
     @include floating();
+    @include button();
     li.section{
         padding: 1rem 0.5rem 0.5rem;
         font-weight: bold;
@@ -193,7 +207,6 @@ main table{
         }
     }
 }
-
 
 // PAGE SECTIONS
 
@@ -260,9 +273,14 @@ main{
             max-width: $width-wide;
             display: flex;
             justify-content: space-around;
+            width: 100%;
             .page-text{
                 padding: 0 $width-page-padding;
                 max-width: $width-narrow;
+                width: 100%;
+                &.wide{
+                    max-width: none;
+                }
             }
         }
     }

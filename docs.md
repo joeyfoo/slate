@@ -21,6 +21,35 @@ Here's an image:
 [![](assets/img/skyline.jpg)](#)
 
 
+## Link collection
+
+<ul class="home-links link-collection">
+    <li class="link">
+        <a href="docs.html">
+            <div class="link-title">
+                <p>Read the <strong>Documentation</strong></p>
+            </div>
+
+            <div class="link-description">
+                <p>(It’s incomplete)</p>
+            </div>
+
+        </a>
+    </li>
+
+    <li class="section">
+        Links below
+    </li>
+    <li class="link">
+        <a href="https://github.com/joeyfoo/slate">
+            <div class="link-title">
+                <p>GitHub repository</p>
+            </div>
+
+        </a>
+    </li>
+</ul>
+
 ## Some great heading (h2)
 
 Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.
