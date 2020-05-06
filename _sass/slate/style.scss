@@ -168,6 +168,33 @@ main table{
     left: calc(-45vw + 50%);
 }
 
+hr{
+    margin: 2rem auto;
+    border-color: rgba($color-text, 0.5);
+}
+
+label{
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25rem 0;
+}
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=button]
+{
+    @include button();
+    background-color: $floating-contrast-bg;
+    display: block;
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:hover, &:focus{
+        border-color: $color-text;
+    }
+}
+
 // COMPONENTS
 .link-collection{
     padding-left: 0;
