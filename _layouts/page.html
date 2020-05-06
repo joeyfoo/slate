@@ -11,6 +11,6 @@ layout: page-template
     </div>
 {% endif %}
 
-<div class="page-text">
+<div class="page-text{% if page.wide %} wide{% endif %}">
     {{ content }}
 </div>
