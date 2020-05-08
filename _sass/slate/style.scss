@@ -317,7 +317,8 @@ main{
     $home-main-width: $width-narrow;
     article.home{
         max-width: none;
-        padding: 4rem 0;
+        padding: 8rem 0;
+
         h1{
             font-weight: normal;
         }
@@ -335,6 +336,7 @@ main{
             }
             .link-collection{
                 max-width: $width-home;
+                margin-top: 2rem;
             }
         }
     }
