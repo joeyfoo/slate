@@ -15,7 +15,7 @@
         {%- endif -%}
         {%- include scripts.html -%}
     </head>
-    <body>
+    <body class="{%- if layout.home-background -%}home-background{%- endif -%}">
         {%- include header.html -%}
         <main aria-label="Content">
             {{ content }}

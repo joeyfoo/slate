@@ -34,6 +34,7 @@ $width-home: $base-font-size * 25 !default;
 
 $background-opacity-start: 0.7 !default;
 $background-opacity-end: 1.0 !default;
+$background-home-color: rgba($color-bg, 0.75) !default;
 
 @mixin floating {
     box-shadow: $floating-shadow;
@@ -80,6 +81,10 @@ body{
         rgba($color-bg, $background-opacity-start) 0,
         rgba($color-bg, $background-opacity-end) 100vh
     );
+    &.home-background{
+        background-image: none;
+        background-color: $background-home-color;
+    }
     color: $color-text;
     
     display: flex;
