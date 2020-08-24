@@ -2,15 +2,15 @@
 layout: page-template
 ---
 
-{% if page.infobox %}
-    <div class="infobox">
-    {% for item in page.infobox %}
+{% if page.sidebar %}
+    <div class="page-content-sidebar">
+    {% for item in page.sidebar %}
         <dt>{{item.title}}</dt>
         <dd>{{item.content | newline_to_br}}</dd>
     {% endfor %}
     </div>
 {% endif %}
 
-<div class="page-text{% if page.wide %} wide{% endif %}">
+<div class="page-content-main">
     {{ content }}
 </div>

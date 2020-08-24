@@ -16,7 +16,7 @@ $color-link: hsl(210, 75%, 75%) !default;
 $color-link-active: scale-color($color: $color-link, $lightness: 50%) !default;
 
 // (Floating elements (e.g. link collection))
-$floating-shadow: 0 0 8rem rgba(#000, 0.75) !default;
+$floating-shadow: 0 0 2rem rgba(#000, 0.5) !default;
 $floating-contrast-bg: rgba(#000, 0.5) !default;
 
 $button-fg: $color-text !default;
@@ -27,8 +27,9 @@ $button-bg-active: scale-color($color-bg, $lightness: 10%) !default;
 $button-shadow-active: inset 0 0 0.5rem saturate(lighten($color-link-active, 20%), 50%), 0 0 0.5rem saturate(lighten($color-link-active, 20%), 50%) !default;
 
 $width-page-padding: 1 * $base-font-size !default; //1rem
+$width-wide: $base-font-size * 60 !default;
 $width-narrow: $base-font-size * 40 !default;
-$width-wide: $width-narrow * 1.5 !default;
+$width-side: $base-font-size * 12 !default;
 $width-home: $base-font-size * 25 !default;
 
 $background-opacity-start: 0.7 !default;
@@ -38,6 +39,7 @@ $background-opacity-end: 1.0 !default;
     box-shadow: $floating-shadow;
     border-radius: 0.5rem;
     overflow: hidden;
+    backdrop-filter: blur(0.5rem);
 }
 
 @mixin button {
@@ -136,6 +138,11 @@ a{
     }
 }
 
+li, ol{
+    &::marker{
+        width: 1rem;
+    }
+}
 main img{
     max-width: 100%;
     @include floating();
@@ -147,6 +154,7 @@ main table{
     margin-bottom: 1rem;
     border-radius: 0;
     border-collapse: collapse;
+    overflow-x: scroll;
     td,th{
         border: 1px solid rgba($color-text, 0.25);
         padding: 0.25rem 0.5rem;
@@ -301,13 +309,37 @@ main{
             display: flex;
             justify-content: space-around;
             width: 100%;
-            .page-text{
+            .page-content-sidebar{
+                flex-grow: 1;
+                flex-shrink: 1;
                 padding: 0 $width-page-padding;
-                max-width: $width-narrow;
-                width: 100%;
-                &.wide{
+                dt{
+                    margin: 0 auto;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    line-height: 1.5rem;
+                    color: $color-heading;
+                }
+                dd{
+                    margin: 0 auto 2rem;
+                }
+            }
+            .page-content-main{
+                flex-grow: 1;
+                flex-shrink: 0;
+                padding: 0 $width-page-padding;
+                & > *{
+                    max-width: $width-narrow;
+                    margin: 0 auto 1rem;
+                }
+                & > .wide{
                     max-width: none;
                 }
+            }
+            @media (max-width: $width-wide)
+            {
+                display: block;
             }
         }
     }

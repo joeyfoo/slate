@@ -3,9 +3,26 @@ layout: page
 title: Documentation
 description: (Incomplete) documentation for the Slate theme.
 background-image: assets/img/skyline.jpg
+sidebar: 
+    -   title: Type
+        content: Documentation
+    -   title: Long sidebar content
+        content: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+    -   title: Sidebar Box
+        content: Content
+    -   title: Sidebar list
+        content: |
+            Line 1
+            Line 2
+            Line 3
+    -   title: Sidebar Box
+        content: Content
+    -   title: Sidebar Box
+        content: Content
 parent:
-  title: Back to home
-  link: index.html
+    title: Back to home
+    link: index.html
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
@@ -127,6 +144,12 @@ In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla e
 2. Second item, dawg
 3. Third item, what what?!
 4. Fourth item, fo sheezy my neezy
+5. Test
+6. Test
+7. Test
+8. Test
+9. Test
+10. Test
 
 
 
