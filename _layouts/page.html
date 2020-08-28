@@ -5,8 +5,10 @@ layout: page-template
 {% if page.sidebar %}
     <div class="page-content-sidebar">
     {% for item in page.sidebar %}
-        <dt>{{item.title}}</dt>
-        <dd>{{item.content | newline_to_br}}</dd>
+        <div class="page-content-sidebar-item">
+            <dt>{{item.title}}</dt>
+            <dd>{{item.content | newline_to_br}}</dd>
+        </div>
     {% endfor %}
     </div>
 {% endif %}

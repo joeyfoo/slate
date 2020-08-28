@@ -318,6 +318,11 @@ main{
                 flex-grow: 1;
                 flex-shrink: 1;
                 padding: 0 $width-page-padding;
+                display: flex;
+                flex-direction: column;
+                .page-content-sidebar-item{
+
+                }
                 dt{
                     margin: 0 auto;
                     font-weight: bold;
@@ -345,6 +350,15 @@ main{
             @media (max-width: $width-wide)
             {
                 display: block;
+                .page-content-sidebar{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .page-content-sidebar-item{
+                    width: $width-side;
+                    margin: 0 1rem 1rem;
+                }
             }
         }
     }
