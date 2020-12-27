@@ -40,20 +40,37 @@ Here's an image:
 
 ## Link collection
 
-<ul class="home-links link-collection">
+<ul class="link-collection">
     <li class="link">
         <a href="docs.html">
             <div class="link-title">
                 <p>Read the <strong>Documentation</strong></p>
             </div>
-
             <div class="link-description">
                 <p>(It’s incomplete)</p>
             </div>
-
         </a>
     </li>
-
+    <li class="link preview" style="background-image:url('assets/img/skyline.jpg')">
+        <a href="docs.html">
+            <div class="link-title">
+                <p>Read the <strong>Documentation</strong></p>
+            </div>
+            <div class="link-description">
+                <p>(It’s incomplete)</p>
+            </div>
+        </a>
+    </li>
+    <li class="link preview">
+        <a href="docs.html">
+            <div class="link-title">
+                <p>Read the <strong>Documentation</strong></p>
+            </div>
+            <div class="link-description">
+                <p>(It’s incomplete)</p>
+            </div>
+        </a>
+    </li>
     <li class="section">
         Links below
     </li>
@@ -62,7 +79,6 @@ Here's an image:
             <div class="link-title">
                 <p>GitHub repository</p>
             </div>
-
         </a>
     </li>
 </ul>

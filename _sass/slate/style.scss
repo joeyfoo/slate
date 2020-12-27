@@ -23,7 +23,7 @@ $button-fg: $color-text !default;
 $button-bg: transparent !default;
 
 $button-fg-active: $color-heading;
-$button-bg-active: scale-color($color-bg, $lightness: 10%) !default;
+$button-bg-active: rgba($button-fg, 0.2) !default;
 $button-shadow-active: inset 0 0 0.5rem saturate(lighten($color-link-active, 20%), 50%), 0 0 0.5rem saturate(lighten($color-link-active, 20%), 50%) !default;
 
 $width-page-padding: 1 * $base-font-size !default; //1rem
@@ -222,6 +222,17 @@ input[type=button]
         font-weight: bold;
     }
     li.link{
+        &.preview{
+            background-position: center;
+            background-size: cover;
+            a{
+                padding-top: 8rem;
+                background-color: rgba($color-bg, 0.75);
+                &:hover, &:focus{
+                    background-color: rgba($color-bg, 0.5);
+                }
+            }
+        }
         a{
             font-size: 1.25rem;
             padding: 0.5rem;
@@ -237,7 +248,6 @@ input[type=button]
             .link-description{
                 font-size: 1rem;
                 opacity: 0.75;
-                padding-left: 0.5rem;
             }
         }
         &:first-child a{
