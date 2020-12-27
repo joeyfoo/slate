@@ -112,6 +112,7 @@ h1{
 h2, h3, h4, h5, h6{
     color: $color-heading;
     font-family: $font-title;
+    padding-top: 1rem;
 }
 h2{
     font-size: 1.75rem;
@@ -362,10 +363,6 @@ main{
                 }
                 .page-date{
                     opacity: 0.5;
-                }
-
-                h2, h3, h4, h5, h6{
-                    margin-top: 2rem;
                 }
             }
             @media (max-width: $width-wide)
