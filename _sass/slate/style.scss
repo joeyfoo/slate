@@ -355,12 +355,17 @@ main{
                 & > *{
                     max-width: $width-narrow;
                     margin: 0 auto 1rem;
+                    
                 }
                 & > .wide{
                     max-width: none;
                 }
                 .page-date{
                     opacity: 0.5;
+                }
+
+                h2, h3, h4, h5, h6{
+                    margin-top: 2rem;
                 }
             }
             @media (max-width: $width-wide)
