@@ -359,6 +359,9 @@ main{
                 & > .wide{
                     max-width: none;
                 }
+                .page-date{
+                    opacity: 0.5;
+                }
             }
             @media (max-width: $width-wide)
             {
