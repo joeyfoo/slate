@@ -357,6 +357,7 @@ main{
                 flex-grow: 1;
                 flex-shrink: 0;
                 padding: 0 $width-page-padding;
+                max-width: calc(100% - $width-page-padding - $width-page-padding);
                 & > *{
                     max-width: $width-narrow;
                     margin: 0 auto 1rem;
