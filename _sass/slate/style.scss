@@ -252,6 +252,9 @@ blockquote{
             display: block;
             @include button();
             border-radius: 0;
+            &.spaced{
+                padding: 1rem;
+            }
             &:hover, &:focus{
                 @include button-active();
             }
