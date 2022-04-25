@@ -230,6 +230,9 @@ blockquote{
     list-style: none;
     @include floating();
     @include button();
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     li.section{
         padding: 1rem 0.5rem 0.5rem;
         font-weight: bold;
@@ -239,7 +242,7 @@ blockquote{
             background-position: center;
             background-size: cover;
             a{
-                padding-top: 8rem;
+                min-height: 16rem;
                 background-color: rgba($color-bg, 0.75);
                 &:hover, &:focus{
                     background-color: rgba($color-bg, 0.5);
