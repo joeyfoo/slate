@@ -199,6 +199,7 @@ label{
     font-weight: bold;
     padding: 0.25rem 0;
 }
+
 input[type=text],
 input[type=date],
 input[type=time],
@@ -214,6 +215,11 @@ input[type=button]
     &:hover, &:focus{
         border-color: $color-text;
     }
+}
+
+blockquote{
+    padding-left: 1rem;
+    border-left: 1px dotted currentColor;
 }
 
 .lead{
@@ -365,7 +371,9 @@ main{
                 & > *{
                     max-width: $width-narrow;
                     margin: 0 auto 1rem;
-                    
+                }
+                & > blockquote{
+                    margin: 2rem auto;
                 }
                 & > .wide{
                     max-width: none;
