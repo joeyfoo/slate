@@ -230,9 +230,6 @@ blockquote{
     list-style: none;
     @include floating();
     @include button();
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     li.section{
         padding: 1rem 0.5rem 0.5rem;
         font-weight: bold;
@@ -252,8 +249,10 @@ blockquote{
         a{
             font-size: 1.25rem;
             padding: 0.5rem;
-            display: block;
             @include button();
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             border-radius: 0;
             &:hover, &:focus{
                 @include button-active();
