@@ -252,9 +252,6 @@ blockquote{
             display: block;
             @include button();
             border-radius: 0;
-            &.spaced{
-                padding: 1rem;
-            }
             &:hover, &:focus{
                 @include button-active();
             }
@@ -273,6 +270,13 @@ blockquote{
         &:last-child a{
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
+        }
+    }
+    &.spaced{
+        li.link{
+            a{
+                padding: 1rem;
+            }
         }
     }
 }
