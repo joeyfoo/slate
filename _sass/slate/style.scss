@@ -382,6 +382,9 @@ main{
                 & > blockquote{
                     margin: 2rem auto;
                 }
+                & > iframe{
+                    display: block;
+                }
                 & > .wide{
                     max-width: none;
                 }
