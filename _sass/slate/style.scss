@@ -423,6 +423,7 @@ main{
             font-weight: normal;
         }
         .home-content{
+            box-sizing: content-box;
             max-width: $home-main-width;
             padding: 0 $width-page-padding;
             @media (min-width: $home-main-width + $width-page-padding * 2) {
