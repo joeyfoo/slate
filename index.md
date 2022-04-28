@@ -7,6 +7,8 @@ welcome: The **Slate** theme.
 
 description: A clean, minimalist theme for Jekyll sites. 
 
+profile-image: assets/img/skyline.jpg
+
 links:
     - title: Read the **Documentation**
       link: docs.html

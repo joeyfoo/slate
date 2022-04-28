@@ -439,6 +439,18 @@ main{
                 max-width: $width-home;
                 margin-top: 2rem;
             }
+
+            .home-profile-image{
+                display: inline-block;
+                height: 6rem;
+                width: 6rem;
+                border-radius: 50%;
+                background-color: #111;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                vertical-align: -50%;
+            }
         }
     }
 }

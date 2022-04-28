@@ -6,6 +6,10 @@ home-background: true
 <article id="content" class="home">
     <div class="home-content">
         <h1 class="home-title">
+            {% if page.profile-image %}
+            <div class="home-profile-image" style="background-image: url({{page.profile-image}});"></div>
+            {% endif %}
+
             {% if page.welcome %}
                 {{ page.welcome | markdownify | remove: '<p>' | remove: '</p>' }}
             {% else if page.title %}
