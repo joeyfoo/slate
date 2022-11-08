@@ -31,7 +31,7 @@ home-background: true
             {% for item in page.links %}
                 {% if item.link %}
                 <li class="link">
-                    <a href="{{ item.link }}">
+                    <a href="{{ item.link }}" {% if item.rel %}rel="{{ item.rel }}"{% endif %}>
                         <div class="link-title">{{ item.title | markdownify }}</div>
                         {% if item.description %}
                             <div class="link-description">{{ item.description | markdownify }}</div>
