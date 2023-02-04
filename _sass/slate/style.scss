@@ -238,7 +238,7 @@ blockquote{
         padding: 1rem 0.5rem 0.5rem;
         font-weight: bold;
     }
-    li.link{
+    li{
         &.preview{
             background-position: center;
             background-size: cover;
@@ -269,7 +269,7 @@ blockquote{
                 opacity: 0.75;
             }
             .link-details{
-                font-size: 0.75rem;
+                font-size: 1rem;
                 opacity: 0.5;
             }
         }
