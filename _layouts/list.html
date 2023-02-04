@@ -5,20 +5,25 @@ layout: page
 {{content}}
 
 <ul class="link-collection spaced">
-  {% for page in site[page.collection] %}
-  <li class="link {% if page.image %}preview{% endif %}" {% if page.image %}style="background-image:url({{page.image}});"
-  {% endif %}>
-    <a href="{{ page.url | relative_url }}" {% if page.color %}style="background-image:linear-gradient(to top, #{{page.color}} -50%, transparent);" {% endif %}>
-      <div class="link-title">
-        {{ page.title | escape }}
-      </div>
-      <div class="link-details">
-        <p>{{ page.date | date_to_string }}</p>
-      </div>
-      <div class="link-description">
-        {% if page.description %}<p>{{ page.description | escape }}</p>{% endif %}
-      </div>
-    </a>
-  </li>
+  {% for item in site[page.collection] %}
+  {% unless item.hidden or item.path == page.path %}
+    {% if item.image %}
+    <li class="link preview" style="background-image:url({{item.image}});">
+    {% else %}
+    <li class="link">
+    {% endif %}
+        <a href="{{ item.url | relative_url }}" {% if item.color %}style="background-image:linear-gradient(to top, #{{item.color}} -50%, transparent);" {% endif %}>
+        <div class="link-title">
+            {{ item.title | escape }}
+        </div>
+        <div class="link-details">
+            <p>{{ item.date | date_to_string }}</p>
+        </div>
+        <div class="link-description">
+            {% if item.description %}<p>{{ item.description | escape }}</p>{% endif %}
+        </div>
+        </a>
+    </li>
+  {% endunless %}
   {% endfor %}
 </ul>
