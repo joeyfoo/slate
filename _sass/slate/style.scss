@@ -387,6 +387,9 @@ main{
                     max-width: $width-narrow;
                     margin: 0 auto 1rem;
                 }
+                & > .full-width{
+                    max-width: none;
+                }
                 & > blockquote{
                     margin: 2rem auto;
                 }
