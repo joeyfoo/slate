@@ -5,7 +5,12 @@ layout: page
 {{content}}
 
 <ul class="link-collection spaced">
-  {% for item in site[page.collection] %}
+  {% assign list = site[page.collection] %}
+  {% if page.reversed %}
+    {% assign list = list | reverse %}
+  {% endif %}
+  
+  {% for item in list %}
   {% unless item.hidden or item.path == page.path %}
     {% if item.image %}
     <li class="link preview" style="background-image:url({{item.image}});">
