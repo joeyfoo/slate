@@ -4,7 +4,7 @@ layout: default
 
 <article id="content">
     <div class="page-info">
-        {% if page.parent %}
+        {% if page.parent.link and page.parent.title %}
         <div class="page-parent">
             <a href="{{ page.parent.link }}">{{ page.parent.title }}</a>
         </div>
