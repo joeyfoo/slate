@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // VARIABLES
 $base-font-size: 16px !default;
 
@@ -434,7 +436,7 @@ main{
             max-width: $home-main-width;
             padding: 0 $width-page-padding;
             @media (min-width: $home-main-width + $width-page-padding * 2) {
-                padding: 0 calc(50vw - #{$home-main-width/ 2});
+                padding: 0 calc(50vw - #{math.div($home-main-width, 2)});
             }
             @media (min-width: $home-main-width + $home-y-offset * 2) {
                 padding: 0 $home-y-offset;
