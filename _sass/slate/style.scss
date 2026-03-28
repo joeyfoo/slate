@@ -143,10 +143,10 @@ a{
     color: $color-link;
     text-decoration: none;
     border-bottom: 1px dotted currentColor;
-    &:hover{
+    &:link:hover{
         color: $color-link-active;
     }
-    &:focus, &:active{
+    &:link:focus, &:link:active{
         color: $color-text;
     }
 }
@@ -247,7 +247,7 @@ blockquote{
             a{
                 min-height: 16rem;
                 background-color: rgba($color-bg, 0.75);
-                &:hover, &:focus{
+                &:link:hover, &:link:focus{
                     background-color: rgba($color-bg, 0.5);
                 }
             }
@@ -260,7 +260,7 @@ blockquote{
             flex-direction: column;
             justify-content: flex-end;
             border-radius: 0;
-            &:hover, &:focus{
+            &:link:hover, &:link:focus {
                 @include button-active();
             }
             p{
