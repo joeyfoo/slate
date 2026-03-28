@@ -244,7 +244,7 @@ blockquote{
         &.preview{
             background-position: center;
             background-size: cover;
-            a{
+            &>a{
                 min-height: 16rem;
                 background-color: rgba($color-bg, 0.75);
                 &:link:hover, &:link:focus{
@@ -252,7 +252,7 @@ blockquote{
                 }
             }
         }
-        a{
+        &>a{
             font-size: 1.25rem;
             padding: 0.5rem;
             @include button();
@@ -275,11 +275,11 @@ blockquote{
                 opacity: 0.5;
             }
         }
-        &:first-child a{
+        &:first-child>a{
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
-        &:last-child a{
+        &:last-child>a{
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
